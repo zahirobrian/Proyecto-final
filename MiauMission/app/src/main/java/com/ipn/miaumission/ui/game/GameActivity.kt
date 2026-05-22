@@ -143,7 +143,7 @@ class GameActivity : AppCompatActivity() {
         val drawable = if (hasCollar) character.drawableCollarRes else character.drawableRes
         val iv = ImageView(this).apply {
             setImageResource(drawable)
-            layoutParams = FrameLayout.LayoutParams(120, 120).also {
+            layoutParams = FrameLayout.LayoutParams(200, 200).also {
                 it.leftMargin = x.toInt()
                 it.topMargin = y.toInt()
             }
