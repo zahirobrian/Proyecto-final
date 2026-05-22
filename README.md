@@ -51,3 +51,53 @@
 - CountDownTimer para el cronómetro
 - Pixel art generado con Python/Pillow
 - Arquitectura simple Activity-based
+
+---
+
+## Capturas de pantalla
+
+### Pantalla de Inicio (Splash)
+<p align="center">
+  <img src="screenshots/splash.png" width="700"/>
+</p>
+<p align="center"><i>Pantalla principal con título animado y PRESS TO START parpadeando</i></p>
+
+---
+
+### Selección de Personaje
+<p align="center">
+  <img src="screenshots/jugadores.png" width="700"/>
+</p>
+<p align="center"><i>Los 5 personajes disponibles: Cheeto, Pelusa, Mantecada, Waffle y Lui</i></p>
+
+---
+
+### Juego en Acción
+<p align="center">
+  <img src="screenshots/juego.png" width="700"/>
+</p>
+<p align="center"><i>Escenario de ciudad pixel art con gato apareciendo en pantalla. HUD con vidas, contador y temporizador</i></p>
+
+---
+
+### Gato con Collar
+<p align="center">
+  <img src="screenshots/collar.png" width="700"/>
+</p>
+<p align="center"><i>Notificación cuando el gato tiene collar — no puede ser rescatado</i></p>
+
+---
+
+### Pregunta Matemática — Opción Múltiple
+<p align="center">
+  <img src="screenshots/pregunta.png" width="700"/>
+</p>
+<p align="center"><i>Desafío matemático con 4 opciones. Nivel 1: Sumas</i></p>
+
+---
+
+### Nivel Completado
+<p align="center">
+  <img src="screenshots/nivel_completado.png" width="700"/>
+</p>
+<p align="center"><i>Pantalla de resultados mostrando gatos rescatados y puntuación final</i></p>
