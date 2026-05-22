@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MiauMission</string>
+    <string name="press_to_start">PRESS TO START</string>
+    <string name="subtitle">RESCATE FELINO CON DESAFÍOS MATEMÁTICOS</string>
+    <string name="select_character">SELECCIONA TU PERSONAJE</string>
+    <string name="cats_rescued">Gatos: %d/%d</string>
+    <string name="time_left">Tiempo: %s</string>
+    <string name="level">NIVEL %d</string>
+    <string name="level_complete">¡NIVEL COMPLETADO!</string>
+    <string name="game_over">GAME OVER</string>
+    <string name="cats_rescued_label">Gatos rescatados:</string>
+    <string name="play_again">JUGAR DE NUEVO</string>
+    <string name="next_level">SIGUIENTE NIVEL</string>
+    <string name="menu">MENÚ</string>
+    <string name="correct">¡CORRECTO!</string>
+    <string name="incorrect">¡INCORRECTO!</string>
+    <string name="has_collar">¡Este gato tiene collar!\nNo necesita rescate.</string>
+    <string name="answer_hint">Tu respuesta…</string>
+    <string name="confirm">CONFIRMAR</string>
+    <string name="true_ans">VERDADERO</string>
+    <string name="false_ans">FALSO</string>
+    <string name="rescue_question">¿Rescatas a este gato?</string>
+    <string name="math_challenge">¡DESAFÍO MATEMÁTICO!</string>
+</resources>

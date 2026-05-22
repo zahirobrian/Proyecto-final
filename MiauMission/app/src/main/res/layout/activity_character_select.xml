@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JUGADORES"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="#FFFFFF"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="0"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Characters row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Cheeto -->
+            <LinearLayout
+                android:id="@+id/cardCheeto"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_character_card"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_cheeto"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHEETO"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- Pelusa -->
+            <LinearLayout
+                android:id="@+id/cardPelusa"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_character_card"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_pelusa"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PELUSA"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- Mantecada -->
+            <LinearLayout
+                android:id="@+id/cardMantecada"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_character_card"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_mantecada"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MANTECADA"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- Waffle -->
+            <LinearLayout
+                android:id="@+id/cardWaffle"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_character_card"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_waffle"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WAFFLE"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- Lui -->
+            <LinearLayout
+                android:id="@+id/cardLui"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_character_card"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cat_lui"
+                    android:scaleType="fitCenter"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LUI"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Play button -->
+        <TextView
+            android:id="@+id/btnPlay"
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:text="¡JUGAR!"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_pixel"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+</FrameLayout>

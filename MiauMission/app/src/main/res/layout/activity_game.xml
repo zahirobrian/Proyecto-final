@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Game background -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_game"
+        android:scaleType="centerCrop"/>
+
+    <!-- HUD top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#AA000000"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <!-- Hearts (lives) -->
+        <LinearLayout
+            android:id="@+id/livesContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"/>
+
+        <!-- Cats rescued -->
+        <TextView
+            android:id="@+id/tvCats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gatos: 0/10"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <!-- Timer -->
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tiempo: 01:00"
+            android:textColor="#FFD700"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <!-- Level -->
+        <TextView
+            android:id="@+id/tvLevel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NIVEL 1"
+            android:textColor="#FFA500"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <!-- Cats container (game area) -->
+    <FrameLayout
+        android:id="@+id/gameArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"/>
+
+    <!-- Question overlay -->
+    <FrameLayout
+        android:id="@+id/questionOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="480dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bg_pixel_panel"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvQuestionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¡DESAFÍO MATEMÁTICO!"
+                android:textSize="18sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Open answer input -->
+            <EditText
+                android:id="@+id/etAnswer"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:inputType="number"
+                android:hint="@string/answer_hint"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="monospace"
+                android:background="@drawable/bg_pixel_panel"
+                android:visibility="gone"/>
+
+            <!-- Multiple choice buttons -->
+            <GridLayout
+                android:id="@+id/gridOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp">
+
+                <TextView android:id="@+id/btnOpt1" android:layout_width="0dp" android:layout_height="48dp"
+                    android:layout_columnWeight="1" android:layout_margin="4dp"
+                    android:gravity="center" android:textSize="16sp" android:fontFamily="monospace"
+                    android:textStyle="bold" android:background="@drawable/btn_pixel_blue"
+                    android:textColor="#FFFFFF" android:clickable="true" android:focusable="true"/>
+                <TextView android:id="@+id/btnOpt2" android:layout_width="0dp" android:layout_height="48dp"
+                    android:layout_columnWeight="1" android:layout_margin="4dp"
+                    android:gravity="center" android:textSize="16sp" android:fontFamily="monospace"
+                    android:textStyle="bold" android:background="@drawable/btn_pixel_blue"
+                    android:textColor="#FFFFFF" android:clickable="true" android:focusable="true"/>
+                <TextView android:id="@+id/btnOpt3" android:layout_width="0dp" android:layout_height="48dp"
+                    android:layout_columnWeight="1" android:layout_margin="4dp"
+                    android:gravity="center" android:textSize="16sp" android:fontFamily="monospace"
+                    android:textStyle="bold" android:background="@drawable/btn_pixel_blue"
+                    android:textColor="#FFFFFF" android:clickable="true" android:focusable="true"/>
+                <TextView android:id="@+id/btnOpt4" android:layout_width="0dp" android:layout_height="48dp"
+                    android:layout_columnWeight="1" android:layout_margin="4dp"
+                    android:gravity="center" android:textSize="16sp" android:fontFamily="monospace"
+                    android:textStyle="bold" android:background="@drawable/btn_pixel_blue"
+                    android:textColor="#FFFFFF" android:clickable="true" android:focusable="true"/>
+            </GridLayout>
+
+            <!-- True/False buttons -->
+            <LinearLayout
+                android:id="@+id/layoutTrueFalse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/btnTrue"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:text="VERDADERO"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/btn_pixel_blue"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+                <TextView
+                    android:id="@+id/btnFalse"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:text="FALSO"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/btn_pixel_blue"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- Confirm button (for open answer) -->
+            <TextView
+                android:id="@+id/btnConfirm"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:text="CONFIRMAR"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_pixel"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"/>
+
+            <!-- Feedback message -->
+            <TextView
+                android:id="@+id/tvFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Collar notification -->
+    <FrameLayout
+        android:id="@+id/collarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bg_pixel_panel"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🐱"
+                android:textSize="48sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¡Este gato tiene collar!\nNo necesita rescate."
+                android:textSize="16sp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
