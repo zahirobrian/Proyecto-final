@@ -1,4 +1,4 @@
-# MiauMission Game 🐱
+# MiauMission Game 🐱.
 
 | Campo | Datos |
 |---|---|
